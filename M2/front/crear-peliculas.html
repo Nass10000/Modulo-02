@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Películas</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./public/index.bundle.js" defer></script>
+</head>
+<body style="background-color: black; color: white;">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid justify-content-center">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./aboutus.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Historiadelcine.html">Historia del Cine</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./crear-peliculas.html">Agregar Películas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <div class="card bg-dark text-white mx-auto" style="max-width: 1600px; padding: 50px;">
+            <div class="card-body">
+                <h2 class="text-center mb-4">Películas</h2>
+                <form style="max-width: 400px; margin: 0 auto;">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Título:</label>
+                        <input type="text" class="form-control" id="title" placeholder="Ingresa el título de la película">
+                    </div>
+                    <div class="mb-3">
+                        <label for="year" class="form-label">Año:</label>
+                        <input type="number" class="form-control" id="year" placeholder="Ingresa el año de la película" min="1888">
+                    </div>
+                    <div class="mb-3">
+                        <label for="director" class="form-label">Director:</label>
+                        <input type="text" class="form-control" id="director" placeholder="Ingresa el director de la película">
+                    </div>
+                    <div class="mb-3">
+                        <label for="duration" class="form-label">Duración:</label>
+                        <div class="d-flex">
+                            <input type="number" class="form-control me-2" id="hours" placeholder="Horas" min="0">
+                            <input type="number" class="form-control" id="minutes" placeholder="Minutos" min="0" max="59">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="genre" class="form-label">Género:</label>
+                        <div class="row">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Acción" id="genreAction">
+                                    <label class="form-check-label" for="genreAction">Acción</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Comedia" id="genreComedy">
+                                    <label class="form-check-label" for="genreComedy">Comedia</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Drama" id="genreDrama">
+                                    <label class="form-check-label" for="genreDrama">Drama</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Fantasía" id="genreFantasy">
+                                    <label class="form-check-label" for="genreFantasy">Fantasía</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Terror" id="genreHorror">
+                                    <label class="form-check-label" for="genreHorror">Terror</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Ciencia Ficción" id="genreSciFi">
+                                    <label class="form-check-label" for="genreSciFi">Ciencia Ficción</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Romance" id="genreRomance">
+                                    <label class="form-check-label" for="genreRomance">Romance</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Documental" id="genreDocumentary">
+                                    <label class="form-check-label" for="genreDocumentary">Documental</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Animación" id="genreAnimation">
+                                    <label class="form-check-label" for="genreAnimation">Animación</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Aventura" id="genreAdventure">
+                                    <label class="form-check-label" for="genreAdventure">Aventura</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Crimen" id="genreCrime">
+                                    <label class="form-check-label" for="genreCrime">Crimen</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Suspenso" id="genreThriller">
+                                    <label class="form-check-label" for="genreThriller">Suspenso</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Musical" id="genreMusical">
+                                    <label class="form-check-label" for="genreMusical">Musical</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Guerra" id="genreWar">
+                                    <label class="form-check-label" for="genreWar">Guerra</label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Psicológico" id="genrePsychological">
+                                    <label class="form-check-label" for="genrePsychological">Psicológico</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    </div>
+                    <div class="mb-3">
+                        <label for="rating" class="form-label">Calificación:</label>
+                        <input type="number" class="form-control" id="rating" placeholder="Calificación" min="1" max="10" step="0.1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="poster" class="form-label">Póster :</label>
+                        <input type="url" class="form-control" id="poster" placeholder="https://example.com/poster.jpg">
+                    </div>
+                    
+                    <div id="form-messages" class="mt-3"></div>
+
+                    <button type="submit" class="btn btn-primary w-100">Añadir Película</button>
+                    <button type="reset" class="btn btn-secondary w-100">Limpiar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
