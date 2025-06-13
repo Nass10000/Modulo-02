@@ -19,7 +19,7 @@ Es ideal como práctica de integración entre frontend y backend usando rutas RE
 - **Node.js** y **Express** para la API REST.
 - **MongoDB** con **Mongoose** como base de datos.
 - Middleware como `cors`, `morgan` y `express.json()` para configuración del servidor.
-
+- **entre otras tecnologías**
 ### Frontend:
 - **HTML5**, **CSS3**, **Bootstrap 5.3**, y **jQuery**.
 - Páginas: `index.html` (página principal), `aboutus.html` (acerca de la app o el equipo).
